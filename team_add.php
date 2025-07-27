@@ -72,7 +72,7 @@
     <!-- register form end  -->
 
     <?php include('footer.php'); ?>
-    <?php include('js.php'); ?>
+    <?php include('js.php'); ?> 
 
 </body>
 

@@ -17,8 +17,14 @@
 
 
 	</div>
-	<?php include('connection.php'); ?>
-	<?php error_reporting(1); ?>
+	<?php
+
+	include('connection.php'); ?>
+	<?php
+	ob_start();
+	error_reporting(1);
+	?>
+
 
 	<?php
 	$error_message = '';  // Error message holder
@@ -37,10 +43,10 @@
 		$connection->query($query);
 		mkdir("../image/team/");
 		move_uploaded_file($_FILES['image']['tmp_name'], '../image/team/' . $image);
-		
-
 		header('location:team_admin.php');
+		ob_end_clean();
 	}
+
 
 	?>
 
